@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>catalog</title>
+          <link rel="shortcut icon" href="../assets/img/hydrocikle.jpg" />
+
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/jquery-ui-slider@1.12.1/jquery-ui.min.css
+"
+      rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="../assets/styles/style.css" />
+  </head>
+  <body>
+    <input type="checkbox" class="mobile-menu-togler" id="mobile-menu-togler" />
+    <div class="mobile-menu">
+      <nav class="mobile__menu">
+        <ul class="mobile__menu-list">
+          <li class="mobile__menu-items">
+            <div class="mobile__menu-items--box">
+              <svg
+                id="icon-person"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.8225 18.096C17.3835 17.302 14.1825 16.606 15.7325 13.678C20.4525 4.766 16.9835 0 12.0005 0C6.91849 0 3.53649 4.949 8.26849 13.678C9.86549 16.623 6.54349 17.319 3.17849 18.096C0.105486 18.806 -0.00951398 20.332 0.000486018 23L0.00448602 24H23.9945L23.9985 23.031C24.0105 20.343 23.9065 18.809 20.8225 18.096Z"
+                  fill="#2F3035"
+                />
+              </svg>
+              <a href="#" class="mobile__menu-link">Войти</a>
+            </div>
+            <label
+              for="mobile-menu-togler"
+              class="mobile__menu-link--icon"
+            ></label>
+          </li>
+          <li class="mobile__menu-items">
+            <svg
+              id="icon-person"
+              width="24"
+              height="22"
+              viewBox="0 0 24 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.8225 18.096C17.3835 17.302 14.1825 16.606 15.7325 13.678C20.4525 4.766 16.9835 0 12.0005 0C6.91849 0 3.53649 4.949 8.26849 13.678C9.86549 16.623 6.54349 17.319 3.17849 18.096C0.105486 18.806 -0.00951398 20.332 0.000486018 23L0.00448602 24H23.9945L23.9985 23.031C24.0105 20.343 23.9065 18.809 20.8225 18.096Z"
+                fill="#2F3035"
+              />
+            </svg>
+            <a href="#" class="mobile__menu-link">Регистрация</a>
+          </li>
+          <li class="mobile__menu-items">
+            <svg
+              id="heart"
+              width="24"
+              height="22"
+              viewBox="0 0 24 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 8.22892C12.234 7.10892 13.547 1.99992 17.382 1.99992C19.602 1.99992 22 3.55092 22 7.00292C22 10.9099 18.373 15.4729 12 19.6319C5.627 15.4729 2 10.9099 2 7.00292C2 3.51892 4.369 1.99792 6.577 1.99792C10.5 1.99792 11.722 7.12392 12 8.22892ZM0 7.00292C0 11.0709 3.06 16.4839 12 21.9999C20.94 16.4839 24 11.0709 24 7.00292C24 -0.959077 14.352 -2.02508 12 3.26592C9.662 -1.99608 0 -1.00408 0 7.00292Z"
+                fill="black"
+              />
+            </svg>
+            <a href="#" class="mobile__menu-link">Избранное</a>
+          </li>
+          <li class="mobile__menu-items">
+            <svg
+              id="icon-basket"
+              width="24"
+              height="22"
+              viewBox="0 0 24 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M29.999 0L29.0703 2.5H26.659L22.3165 17.5H5.76777L-0.000976562 3.75H21.014L20.309 6.25H3.75902L7.43027 15H20.4653L24.7553 0H29.999ZM10.624 18.75C9.58902 18.75 8.74902 19.59 8.74902 20.625C8.74902 21.6612 9.58902 22.5 10.624 22.5C11.659 22.5 12.499 21.6612 12.499 20.625C12.499 19.59 11.659 18.75 10.624 18.75ZM19.249 10L16.874 18.75C15.839 18.75 14.999 19.5888 14.999 20.625C14.999 21.6612 15.839 22.5 16.874 22.5C17.909 22.5 18.749 21.6612 18.749 20.625C18.749 19.59 17.909 18.75 16.874 18.75L19.249 10Z"
+                fill="#2F3035"
+              />
+            </svg>
+            <a href="#" class="mobile__menu-link">Корзина</a>
+          </li>
+          <li class="mobile__menu-items">
+            <svg
+              width="24"
+              height="22"
+              viewBox="0 0 24 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.83333 13.3429C6.55719 13.3429 6.33333 13.5667 6.33333 13.8429V19.7C6.33333 19.9761 6.10948 20.2 5.83333 20.2H1.5C1.22386 20.2 1 19.9761 1 19.7V8.08711C1 7.94115 1.06378 7.80247 1.1746 7.70748L8.6746 1.27891C8.86185 1.11842 9.13815 1.11842 9.3254 1.27891L16.8254 7.70748C16.9362 7.80247 17 7.94115 17 8.08711V19.7C17 19.9761 16.7761 20.2 16.5 20.2H12.1667C11.8905 20.2 11.6667 19.9761 11.6667 19.7V13.8429C11.6667 13.5667 11.4428 13.3429 11.1667 13.3429H6.83333Z"
+                stroke="#2F3035"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <a href="#" class="mobile__menu-link">Магазины</a>
+          </li>
+          <li class="mobile__menu-items">
+            <svg
+              width="24"
+              height="22"
+              viewBox="0 0 24 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.14209 1.98291C6.73682 2.65967 7.03418 3.57568 7.03418 4.73096C7.03418 5.88623 6.73682 6.80566 6.14209 7.48926C5.54736 8.17285 4.75098 8.51465 3.75293 8.51465C2.75488 8.51465 1.9585 8.17285 1.36377 7.48926C0.775879 6.80566 0.481934 5.88623 0.481934 4.73096C0.481934 3.57568 0.775879 2.65967 1.36377 1.98291C1.9585 1.29932 2.75488 0.95752 3.75293 0.95752C4.75098 0.95752 5.54736 1.29932 6.14209 1.98291ZM3.75293 6.90479C4.13574 6.90479 4.43311 6.71338 4.64502 6.33057C4.86377 5.94092 4.97314 5.40771 4.97314 4.73096C4.97314 4.04736 4.86377 3.51416 4.64502 3.13135C4.43311 2.7417 4.13574 2.54688 3.75293 2.54688C3.37695 2.54688 3.07959 2.7417 2.86084 3.13135C2.64893 3.51416 2.54297 4.04736 2.54297 4.73096C2.54297 5.40771 2.64893 5.94092 2.86084 6.33057C3.07959 6.71338 3.37695 6.90479 3.75293 6.90479ZM3.95801 16H1.72266L7.45459 8.15576L12.5405 1.20361H14.7554L9.17725 8.84277L3.95801 16ZM15.1143 9.65283C15.709 10.3364 16.0063 11.2559 16.0063 12.4111C16.0063 13.5664 15.709 14.4858 15.1143 15.1694C14.5195 15.8462 13.7231 16.1846 12.7251 16.1846C11.7271 16.1846 10.9307 15.8462 10.3359 15.1694C9.74805 14.4858 9.4541 13.5664 9.4541 12.4111C9.4541 11.2559 9.74805 10.3364 10.3359 9.65283C10.9307 8.96924 11.7271 8.62744 12.7251 8.62744C13.7231 8.62744 14.5195 8.96924 15.1143 9.65283ZM11.833 14.0005C12.0518 14.3901 12.3491 14.585 12.7251 14.585C13.1011 14.585 13.3984 14.3901 13.6172 14.0005C13.8359 13.6108 13.9453 13.0776 13.9453 12.4009C13.9453 11.7241 13.8359 11.1909 13.6172 10.8013C13.3984 10.4116 13.1011 10.2168 12.7251 10.2168C12.3491 10.2168 12.0518 10.4116 11.833 10.8013C11.6211 11.1909 11.5151 11.7241 11.5151 12.4009C11.5151 13.0776 11.6211 13.6108 11.833 14.0005Z"
+                fill="#2F3035"
+              />
+            </svg>
+            <a href="#" class="mobile__menu-link">Акции</a>
+          </li>
+          <li class="mobile__menu-items">
+            <svg
+              width="24"
+              height="22"
+              viewBox="0 0 24 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.1708 3.14282H17.0714V15.1641C17.0714 15.6815 16.6056 16 16.1009 16H1.89286C1.3882 16 1 15.6019 1 15.0844V3.14282H6.82298"
+                stroke="#2F3035"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M11.3853 3.14286H17.0165C17.0553 3.14286 17.0942 3.11088 17.0553 3.07889L14.9582 1H3.11323L1.01609 3.07889C0.97725 3.11088 1.01609 3.14286 1.05492 3.14286H6.68614"
+                stroke="#2F3035"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M11.7141 3.14286L10.7824 1H7.38178L6.35693 3.14286"
+                stroke="#2F3035"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M11.7141 3.14282V7.42854L9.10419 5.92274L6.35693 7.42854V3.14282"
+                stroke="#2F3035"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M10.9864 11.7143H7.1218C6.67898 11.7143 6.35693 11.276 6.35693 10.7889V10.4967C6.35693 9.96102 6.71924 9.57141 7.1218 9.57141H10.9461C11.389 9.57141 11.711 10.0097 11.711 10.4967V10.7889C11.7513 11.3247 11.389 11.7143 10.9864 11.7143Z"
+                stroke="#2F3035"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+              />
+            </svg>
+
+            <a href="#" class="mobile__menu-link .mobile__menu-link--padding"
+              >Доставка и оплата</a
+            >
+          </li>
+          <li class="mobile__menu-items">
+            <a href="#" class="mobile__menu-link mobile__menu-link--padding"
+              >Квадроциклы</a
+            >
+          </li>
+          <li class="mobile__menu-items">
+            <a href="#" class="mobile__menu-link mobile__menu-link--padding"
+              >Катера</a
+            >
+          </li>
+          <li class="mobile__menu-items">
+            <a href="#" class="mobile__menu-link mobile__menu-link--padding"
+              >Гидроциклы</a
+            >
+          </li>
+          <li class="mobile__menu-items">
+            <a href="#" class="mobile__menu-link mobile__menu-link--padding"
+              >Лодки</a
+            >
+          </li>
+          <li class="mobile__menu-items">
+            <a href="#" class="mobile__menu-link mobile__menu-link--padding"
+              >Вездеходы</a
+            >
+          </li>
+          <li class="mobile__menu-items">
+            <a href="#" class="mobile__menu-link mobile__menu-link--padding"
+              >Снегоходы</a
+            >
+          </li>
+          <li class="mobile__menu-items">
+            <a href="#" class="mobile__menu-link mobile__menu-link--padding"
+              >Двигатели</a
+            >
+          </li>
+          <li class="mobile__menu-items">
+            <a href="#" class="mobile__menu-link mobile__menu-link--padding"
+              >Запчасти</a
+            >
+          </li>
+          <li class="mobile__menu-items">
+            <a href="#" class="mobile__menu-link mobile__menu-link--padding"
+              >Москва, ул. Науки 25</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <header class="header">
+      <div class="header__top">
+        <div class="wrapper header__top-wrapper">
+          <div class="header__burger">
+            <label class="header__burger-btn" for="mobile-menu-togler">
+              <svg width="33.673828" height="27.000000">
+                <use xlink:href="../assets/img/svg/burger-icon.svg#burger"></use>
+              </svg>
+            </label>
+          </div>
+          <nav class="header__top-nav">
+            <a href="#" class="header__top-nav-link">Магазины</a>
+            <a href="#" class="header__top-nav-link">Акции</a>
+            <a href="#" class="header__top-nav-link">Доставка и оплата</a>
+          </nav>
+          <a href="#" class="header__logo-link">
+            <svg width="80" height="76">
+              <use xlink:href="../assets/img/svg/logo.svg#logo"></use>
+            </svg>
+          </a>
+          <a href="#" class="header__logo-link2">
+            <svg width="78.097168" height="14.340820">
+              <use xlink:href="../assets/img/svg/logo2.svg#logo2"></use>
+            </svg>
+          </a>
+          <p class="header__adress">Москва, ул. Науки 25</p>
+          <div class="header__menu">
+            <a href="#" class="header__menu-link">
+              <svg width="24" height="22">
+                <use
+                  xlink:href="../assets/img/svg/header-hurt.svg#icon-hurt"
+                ></use>
+              </svg>
+            </a>
+            <a href="#" class="header__menu-link">
+              <svg width="24" height="24">
+                <use
+                  xlink:href="../assets/img/svg/header-person.svg#icon-person"
+                ></use>
+              </svg>
+            </a>
+            <a href="#" class="header__menu-link">
+              <svg width="30" height="23">
+                <use
+                  xlink:href="../assets/img/svg/header-basket.svg#icon-basket"
+                ></use>
+              </svg>
+              <div class="header__menu-counter">1</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="wrapper header__bottom-wrapper">
+          <nav class="header__bottom-menu">
+            <a href="#" class="header__bottom-menu-link">Квадроциклы</a>
+            <a href="#" class="header__bottom-menu-link">Катера</a>
+            <a
+              href="#"
+              class="header__bottom-menu-link header__bottom-menu-link_active"
+              >Гидроциклы</a
+            >
+            <a href="#" class="header__bottom-menu-link">Лодки</a>
+            <a href="#" class="header__bottom-menu-link">Вездеходы</a>
+            <a href="#" class="header__bottom-menu-link">Снегоходы</a>
+            <a href="#" class="header__bottom-menu-link">Двигатели</a>
+            <a href="#" class="header__bottom-menu-link">Запчасти</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="catalog">
+        <div class="wrapper catalog__wrapper">
+          <div class="breadcrumbs">
+            <a href="#" class="breadcrumbs__link">Главная</a>
+            <a href="#" class="breadcrumbs__link breadcrumbs__link-activ"
+              >Гидроциклы</a
+            >
+          </div>
+          <h1 class="catalog__heading">Гидроциклы</h1>
+          <div class="catalog__row">
+            <div class="catalog__tags-links">
+              <a href="#" class="catalog__tags-link">Полноприводные</a>
+              <a href="#" class="catalog__tags-link">от 5000</a>
+              <a href="#" class="catalog__tags-link">BRP</a>
+              <a href="#" class="catalog__tags-link">еще</a>
+            </div>
+            <div class="catalog__select">
+              <div class="catalog__select-header">
+                <p class="catalog__select-value">По полулярности</p>
+                <div class="catalog__select-shevron">
+                  <svg width="12.000000" height="7.400024">
+                    <use
+                      xlink:href="../assets/img/svg/shevron.svg#shevron"
+                    ></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="catalog__select-body">
+                <button class="catalog__select-btn">По популярности</button>
+                <button class="catalog__select-btn">По цене</button>
+                <button class="catalog__select-btn">По цвету</button>
+              </div>
+              <div class="catalog__view">
+                <button class="catalog__view-menu">
+                  <svg width="23" height="21">
+                    <use
+                      xlink:href="../assets/img/svg/catalog-plita.svg#plita"
+                    ></use>
+                  </svg>
+                </button>
+                <button class="catalog__view-menu">
+                  <svg width="25" height="19">
+                    <use
+                      xlink:href="../assets/img/svg/catalog-otion.svg#option"
+                    ></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__grid">
+            <form class="catalog__filter">
+              <div class="catalog__filter__menu">
+                <button class="catalog__filter-btn catalog__filter-btn--activ">
+                  Параметры
+                </button>
+                <button class="catalog__filter-btn">по марке</button>
+              </div>
+              <div class="accordeon__item">
+                <div class="accorden__item-header">
+                  <svg width="12" height="8">
+                    <use
+                      xlink:href="../assets/img/svg/arrow-gary-top.svg#arrow-top"
+                    ></use>
+                  </svg>
+                  <p class="accorden__item-text">Наличие</p>
+                </div>
+                <div class="accordeon__content">
+                  <label class="accordeon__checkbox-label">
+                    <input class="accordeon__checkbox-input" type="checkbox" />
+                    <div class="checkbox"></div>
+                    В наличии
+                  </label>
+                  <label class="accordeon__checkbox-label">
+                    <input class="accordeon__checkbox-input" type="checkbox" />
+                    <div class="checkbox"></div>
+                    Под заказ
+                  </label>
+                </div>
+              </div>
+              <div class="accordeon__item">
+                <div class="accorden__item-header">
+                  <svg width="12" height="8">
+                    <use
+                      xlink:href="../assets/img/svg/arrow-gary-top.svg#arrow-top"
+                    ></use>
+                  </svg>
+                  <p class="accorden__item-text">Новинки</p>
+                </div>
+                <div class="accordeon__content">
+                  <label class="accordeon__checkbox-label">
+                    <input class="accordeon__checkbox-input" type="checkbox" />
+                    <div class="checkbox"></div>
+                    Все
+                  </label>
+                  <label class="accordeon__checkbox-label">
+                    <input class="accordeon__checkbox-input" type="checkbox" />
+                    <div class="checkbox"></div>
+                    Под заказ
+                  </label>
+                  <label class="accordeon__checkbox-label">
+                    <input class="accordeon__checkbox-input" type="checkbox" />
+                    <div class="checkbox"></div>
+                    Акции
+                  </label>
+                </div>
+              </div>
+              <div class="accordeon__item">
+                <div class="accorden__item-header">
+                  <svg width="12" height="8">
+                    <use
+                      xlink:href="../assets/img/svg/arrow-gary-top.svg#arrow-top"
+                    ></use>
+                  </svg>
+                  <p class="accorden__item-text">Цена</p>
+                </div>
+                <div class="accordeon__content accordeon__content-colum">
+                  <div class="price-slider"></div>
+                  <div class="price__values">
+                    <div class="price__values-item">
+                      от
+                      <span class="price__values-item--number price__values-min"
+                        >100 000</span
+                      >
+                    </div>
+                    <div class="price__values-item">
+                      до
+                      <span class="price__values-item--number price__values-max"
+                        >500 000</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordeon__menu">
+                <div class="accordeon__menu-row">
+                  <p class="accordeon__menu-heading">Мощность,л.с.</p>
+                  <div class="select">
+                    <div class="select__input">90</div>
+                    <div class="select__chevron">
+                      <svg width="12" height="8">
+                        <use
+                          xlink:href="../assets/img/svg/arrow-gary-top.svg#arrow-top"
+                        ></use>
+                      </svg>
+                    </div>
+                    <div class="select__menu">
+                      <button type="button" class="select__menu-btn">90</button>
+                      <button type="button" class="select__menu-btn">
+                        130
+                      </button>
+                      <button type="button" class="select__menu-btn">
+                        154
+                      </button>
+                      <button type="button" class="select__menu-btn">
+                        230
+                      </button>
+                      <button type="button" class="select__menu-btn">
+                        300
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordeon__menu-row">
+                  <p class="accordeon__menu-heading">Мощность двигателя,л.с.</p>
+                  <div class="select">
+                    <div class="select__input">90</div>
+                    <div class="select__chevron">
+                      <svg width="12" height="8">
+                        <use
+                          xlink:href="../assets/img/svg/arrow-gary-top.svg#arrow-top"
+                        ></use>
+                      </svg>
+                    </div>
+                    <div class="select__menu">
+                      <button type="button" class="select__menu-btn">90</button>
+                      <button type="button" class="select__menu-btn">
+                        130
+                      </button>
+                      <button type="button" class="select__menu-btn">
+                        154
+                      </button>
+                      <button type="button" class="select__menu-btn">
+                        230
+                      </button>
+                      <button type="button" class="select__menu-btn">
+                        300
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordeon__menu-row">
+                  <p class="accordeon__menu-heading">Макс.скорость</p>
+                  <div class="select">
+                    <div class="select__input">90</div>
+                    <div class="select__chevron">
+                      <svg width="12" height="8">
+                        <use
+                          xlink:href="../assets/img/svg/arrow-gary-top.svg#arrow-top"
+                        ></use>
+                      </svg>
+                    </div>
+                    <div class="select__menu">
+                      <button type="button" class="select__menu-btn">90</button>
+                      <button type="button" class="select__menu-btn">
+                        130
+                      </button>
+                      <button type="button" class="select__menu-btn">
+                        154
+                      </button>
+                      <button type="button" class="select__menu-btn">
+                        230
+                      </button>
+                      <button type="button" class="select__menu-btn">
+                        300
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordeon__item">
+                <div class="accorden__item-header">
+                  <svg width="12" height="8">
+                    <use
+                      xlink:href="../assets/img/svg/arrow-gary-top.svg#arrow-top"
+                    ></use>
+                  </svg>
+                  <p class="accorden__item-text">Бренд</p>
+                </div>
+                <div class="accordeon__content accordeon__content-colum">
+                  <div class="accordeon__content-colum--item">
+                    <label class="accordeon__checkbox-label">
+                      <input
+                        class="accordeon__checkbox-input"
+                        type="checkbox"
+                      />
+                      <div class="checkbox"></div>
+                      BRP
+                    </label>
+                    <label class="accordeon__checkbox-label">
+                      <input
+                        class="accordeon__checkbox-input"
+                        type="checkbox"
+                      />
+                      <div class="checkbox"></div>
+                      Spark 2
+                    </label>
+                    <label class="accordeon__checkbox-label">
+                      <input
+                        class="accordeon__checkbox-input"
+                        type="checkbox"
+                      />
+                      <div class="checkbox"></div>
+                      Spark 3
+                    </label>
+                  </div>
+                  <div class="accordeon__content-colum--item">
+                    <a href="#" class="accordeon__checkbox-link">
+                      Показать еще
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordeon__item">
+                <div class="accorden__item-header">
+                  <svg width="12" height="8">
+                    <use
+                      xlink:href="../assets/img/svg/arrow-gary-top.svg#arrow-top"
+                    ></use>
+                  </svg>
+                  <p class="accorden__item-text">Модель</p>
+                </div>
+                <div class="accordeon__content accordeon__content-colum">
+                  <div class="accordeon__content-colum--item">
+                    <input
+                      class="accordeon__content-input"
+                      type="text"
+                      placeholder="Введите модель"
+                    />
+                  </div>
+                  <div class="accordeon__content-colum--item">
+                    <label class="accordeon__checkbox-label">
+                      <input
+                        class="accordeon__checkbox-input"
+                        type="checkbox"
+                      />
+                      <div class="checkbox"></div>
+                      Sea-doo Spark 2
+                    </label>
+                    <label class="accordeon__checkbox-label">
+                      <input
+                        class="accordeon__checkbox-input"
+                        type="checkbox"
+                      />
+                      <div class="checkbox"></div>
+                      SeaDoo Spark 90
+                    </label>
+                    <label class="accordeon__checkbox-label">
+                      <input
+                        class="accordeon__checkbox-input"
+                        type="checkbox"
+                      />
+                      <div class="checkbox"></div>
+                      SeaDoo GTI 155
+                    </label>
+                    <label class="accordeon__checkbox-label">
+                      <input
+                        class="accordeon__checkbox-input"
+                        type="checkbox"
+                      />
+                      <div class="checkbox"></div>
+                      SeaDoo GTR 230
+                    </label>
+                  </div>
+                  <div class="accordeon__content-colum--item">
+                    <a href="#" class="accordeon__checkbox-link">
+                      Показать еще
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordeon__item">
+                <div class="accorden__item-header">
+                  <svg width="12" height="8">
+                    <use
+                      xlink:href="../assets/img/svg/arrow-gary-top.svg#arrow-top"
+                    ></use>
+                  </svg>
+                  <p class="accorden__item-text">Акции</p>
+                </div>
+                <div class="accordeon__content">
+                  <label>
+                    <input class="accordeon__label-input" type="checkbox" />
+                    <div class="accordeon__content-salle">SALE</div>
+                  </label>
+                  <label>
+                    <input class="accordeon__label-input" type="checkbox" />
+                    <div class="accordeon__content-salle">NEW</div>
+                  </label>
+                  <label>
+                    <input class="accordeon__label-input" type="checkbox" />
+                    <div class="accordeon__content-salle">HIT</div>
+                  </label>
+                  <label for="accordeon__label">
+                    <input class="accordeon__label-input" type="checkbox" />
+                    <div
+                      class="accordeon__content-salle accordeon__content-salle--black"
+                    >
+                      ДИЛЕР
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <div class="accordeon__item">
+                <div class="accorden__item-header">
+                  <svg width="12" height="8">
+                    <use
+                      xlink:href="../assets/img/svg/arrow-gary-top.svg#arrow-top"
+                    ></use>
+                  </svg>
+                  <p class="accorden__item-text">Страны</p>
+                </div>
+                <div class="accordeon__content accordeon__content-colum">
+                  <div class="accordeon__content-colum--item">
+                    <label class="accordeon__checkbox-label">
+                      <input
+                        class="accordeon__checkbox-input"
+                        type="checkbox"
+                      />
+                      <div class="checkbox"></div>
+                      Россия
+                    </label>
+                    <label class="accordeon__checkbox-label">
+                      <input
+                        class="accordeon__checkbox-input"
+                        type="checkbox"
+                      />
+                      <div class="checkbox"></div>
+                      Германия
+                    </label>
+                    <label class="accordeon__checkbox-label">
+                      <input
+                        class="accordeon__checkbox-input"
+                        type="checkbox"
+                      />
+                      <div class="checkbox"></div>
+                      Китай
+                    </label>
+                    <label class="accordeon__checkbox-label">
+                      <input
+                        class="accordeon__checkbox-input"
+                        type="checkbox"
+                      />
+                      <div class="checkbox"></div>
+                      CША
+                    </label>
+                  </div>
+                  <div class="accordeon__content-colum--item">
+                    <a href="#" class="accordeon__checkbox-link">
+                      Показать еще
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="accordeon__bottom">
+                <button class="accordeon__bottom-btn">ВЫБРАТЬ</button>
+                <div class="accorden__bottom-additional">
+                  <p class="accorden__bottom-text">Дополнительные параметры</p>
+                  <svg width="12" height="8">
+                    <use
+                      xlink:href="../assets/img/svg/arrow-gary-top.svg#arrow-top"
+                    ></use>
+                  </svg>
+                </div>
+                <a href="#" class="accordeon__bottom-reset">
+                  Сбросить фильтр
+                </a>
+              </div>
+            </form>
+            <div class="catalog">
+              <div class="catalog__list">
+                <div class="catalog__card">
+                  <a href="#" class="catalog__hover"> посмотреть товар</a>
+                  <button class="catalog__card-btn">
+                    <svg width="24" height="22">
+                      <use xlink:href="../assets/img/svg/heart.svg#heart"></use>
+                    </svg>
+                  </button>
+                  <img
+                    src="../assets/img/catalog-card/catalog-hidro1.jpg"
+                    alt="jet ski"
+                    class="catalog__card-img"
+                  />
+                  <p class="catalog__card-text">
+                    Гидроцикл BRP SeaDoo GTI 130hp SE Black\Mango
+                  </p>
+                  <p class="catalog__card-text-price">1 049 500 ₽</p>
+                  <button class="catalog__card-card-btn">
+                    <svg width="30" height="23">
+                      <use
+                        xlink:href="../assets/img/svg/basket.svg#basket"
+                      ></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="catalog__card catalog__card-sale">
+                  <a href="#" class="catalog__hover"> посмотреть товар</a>
+                  <button class="catalog__card-btn">
+                    <svg width="24" height="22">
+                      <use xlink:href="../assets/img/svg/heart.svg#heart"></use>
+                    </svg>
+                  </button>
+                  <img
+                    src="../assets/img/catalog-card/catalog-hydro2.jpeg"
+                    alt="jet ski"
+                    class="catalog__card-img"
+                  />
+                  <p class="catalog__card-text">
+                    Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic
+                  </p>
+                  <p class="catalog__card-text-price">1 100 475 ₽</p>
+                  <button class="catalog__card-card-btn">
+                    <svg width="30" height="23">
+                      <use
+                        xlink:href="../assets/img/svg/basket.svg#basket"
+                      ></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="catalog__card">
+                  <a href="#" class="catalog__hover"> посмотреть товар</a>
+                  <button class="catalog__card-btn">
+                    <svg width="24" height="22">
+                      <use xlink:href="../assets/img/svg/heart.svg#heart"></use>
+                    </svg>
+                  </button>
+                  <img
+                    src="../assets/img/catalog-card/catalog-hydro3.jpeg"
+                    alt="jet ski"
+                    class="catalog__card-img"
+                  />
+                  <p class="catalog__card-text">
+                    Гидроцикл BRP SeaDoo GTR 230hp X California green
+                  </p>
+                  <p class="catalog__card-text-price">1 323 700 ₽</p>
+                  <button class="catalog__card-card-btn">
+                    <svg width="30" height="23">
+                      <use
+                        xlink:href="../assets/img/svg/basket.svg#basket"
+                      ></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="catalog__card catalog__card-sale">
+                  <a href="#" class="catalog__hover"> посмотреть товар</a>
+                  <button class="catalog__card-btn">
+                    <svg width="24" height="22">
+                      <use xlink:href="../assets/img/svg/heart.svg#heart"></use>
+                    </svg>
+                  </button>
+                  <img
+                    src="../assets/img/catalog-card/catalog-hydro4.jpeg"
+                    alt="jet ski"
+                    class="catalog__card-img"
+                  />
+                  <p class="catalog__card-text">
+                    Гидроцикл BRP SeaDoo GTR 230hp STD Black / Gulfstream
+                  </p>
+                  <p class="catalog__card-text-price">1 049 500 ₽</p>
+                  <button class="catalog__card-card-btn">
+                    <svg width="30" height="23">
+                      <use
+                        xlink:href="../assets/img/svg/basket.svg#basket"
+                      ></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="catalog__card">
+                  <a href="#" class="catalog__hover"> посмотреть товар</a>
+                  <button class="catalog__card-btn">
+                    <svg width="24" height="22">
+                      <use xlink:href="../assets/img/svg/heart.svg#heart"></use>
+                    </svg>
+                  </button>
+                  <img
+                    src="../assets/img/catalog-card/catalog-hydro5.jpeg"
+                    alt="jet ski"
+                    class="catalog__card-img"
+                  />
+                  <p class="catalog__card-text">
+                    Гидроцикл BRP SeaDoo GTX 300hp LTD Liquid Metal
+                  </p>
+                  <p class="catalog__card-text-price">1 543 000 ₽</p>
+                  <button class="catalog__card-card-btn">
+                    <svg width="30" height="23">
+                      <use
+                        xlink:href="../assets/img/svg/basket.svg#basket"
+                      ></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="catalog__card">
+                  <a href="#" class="catalog__hover"> посмотреть товар</a>
+                  <button class="catalog__card-btn">
+                    <svg width="24" height="22">
+                      <use xlink:href="../assets/img/svg/heart.svg#heart"></use>
+                    </svg>
+                  </button>
+                  <img
+                    src="../assets/img/catalog-card/catalog-hydro6.jpeg"
+                    alt="jet ski"
+                    class="catalog__card-img"
+                  />
+                  <p class="catalog__card-text">
+                    Гидроцикл BRP SeaDoo Spark 60hp 2 up
+                  </p>
+                  <p class="catalog__card-text-price">732 345 ₽</p>
+                  <button class="catalog__card-card-btn">
+                    <svg width="30" height="23">
+                      <use
+                        xlink:href="../assets/img/svg/basket.svg#basket"
+                      ></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="catalog__card catalog__card-sale">
+                  <a href="#" class="catalog__hover"> посмотреть товар</a>
+                  <button class="catalog__card-btn">
+                    <svg width="24" height="22">
+                      <use xlink:href="../assets/img/svg/heart.svg#heart"></use>
+                    </svg>
+                  </button>
+                  <img
+                    src="../assets/img/catalog-card/catalog-hydro7.jpeg"
+                    alt="jet ski"
+                    class="catalog__card-img"
+                  />
+                  <p class="catalog__card-text">
+                    Гидроцикл BRP SeaDoo Spark GTS 90hp Rental
+                  </p>
+                  <p class="catalog__card-text-price">857 666 ₽</p>
+                  <button class="catalog__card-card-btn">
+                    <svg width="30" height="23">
+                      <use
+                        xlink:href="../assets/img/svg/basket.svg#basket"
+                      ></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="catalog__card">
+                  <a href="#" class="catalog__hover"> посмотреть товар</a>
+                  <button class="catalog__card-btn">
+                    <svg width="24" height="22">
+                      <use xlink:href="../assets/img/svg/heart.svg#heart"></use>
+                    </svg>
+                  </button>
+                  <img
+                    src="../assets/img/catalog-card/catalog-hydro8.jpeg"
+                    alt="jet ski"
+                    class="catalog__card-img"
+                  />
+                  <p class="catalog__card-text">
+                    Гидроцикл BRP SeaDoo WAKE 230hp PRO Teal blue
+                  </p>
+                  <p class="catalog__card-text-price">1 229 711 ₽</p>
+                  <button class="catalog__card-card-btn">
+                    <svg width="30" height="23">
+                      <use
+                        xlink:href="../assets/img/svg/basket.svg#basket"
+                      ></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="catalog__card">
+                  <a href="#" class="catalog__hover"> посмотреть товар</a>
+                  <button class="catalog__card-btn">
+                    <svg width="24" height="22">
+                      <use xlink:href="../assets/img/svg/heart.svg#heart"></use>
+                    </svg>
+                  </button>
+                  <img
+                    src="../assets/img/catalog-card/catalog-hydro9.jpeg"
+                    alt="jet ski"
+                    class="catalog__card-img"
+                  />
+                  <p class="catalog__card-text">
+                    Гидроцикл Spark 2-UP 900 Ho Ace Chili Pepper
+                  </p>
+                  <p class="catalog__card-text-price">587 440 ₽</p>
+                  <button class="catalog__card-card-btn">
+                    <svg width="30" height="23">
+                      <use
+                        xlink:href="../assets/img/svg/basket.svg#basket"
+                      ></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="catalog__card">
+                  <a href="#" class="catalog__hover"> посмотреть товар</a>
+                  <button class="catalog__card-btn">
+                    <svg width="24" height="22">
+                      <use xlink:href="../assets/img/svg/heart.svg#heart"></use>
+                    </svg>
+                  </button>
+                  <img
+                    src="../assets/img/catalog-card/catalog-hydro10.jpeg"
+                    alt="jet ski"
+                    class="catalog__card-img"
+                  />
+                  <p class="catalog__card-text">
+                    Гидроцикл Spark 2-UP 900 Ho Ace Pineapple
+                  </p>
+                  <p class="catalog__card-text-price">587 440 ₽</p>
+                  <button class="catalog__card-card-btn">
+                    <svg width="30" height="23">
+                      <use
+                        xlink:href="../assets/img/svg/basket.svg#basket"
+                      ></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="catalog__card">
+                  <a href="#" class="catalog__hover"> посмотреть товар</a>
+                  <button class="catalog__card-btn">
+                    <svg width="24" height="22">
+                      <use xlink:href="../assets/img/svg/heart.svg#heart"></use>
+                    </svg>
+                  </button>
+                  <img
+                    src="../assets/img/catalog-card/catalog-hydro11.jpeg"
+                    alt="jet ski"
+                    class="catalog__card-img"
+                  />
+                  <p class="catalog__card-text">
+                    Гидроцикл BRP Sea-doo Spark 2-UP 900 Ace Vanilla
+                  </p>
+                  <p class="catalog__card-text-price">600 440 ₽</p>
+                  <button class="catalog__card-card-btn">
+                    <svg width="30" height="23">
+                      <use
+                        xlink:href="../assets/img/svg/basket.svg#basket"
+                      ></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="catalog__card catalog__card-sale">
+                  <a href="#" class="catalog__hover"> посмотреть товар</a>
+                  <button class="catalog__card-btn">
+                    <svg width="24" height="22">
+                      <use xlink:href="../assets/img/svg/heart.svg#heart"></use>
+                    </svg>
+                  </button>
+                  <img
+                    src="../assets/img/catalog-card/catalog-hydro12.jpeg"
+                    alt="jet ski"
+                    class="catalog__card-img"
+                  />
+                  <p class="catalog__card-text">
+                    Гидроцикл Spark 3-UP 900 HO Ace IBR Blueberry
+                  </p>
+                  <p class="catalog__card-text-price">487 440 ₽</p>
+                  <button class="catalog__card-card-btn">
+                    <svg width="30" height="23">
+                      <use
+                        xlink:href="../assets/img/svg/basket.svg#basket"
+                      ></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="pagination">
+                <a class="pagination__nmbr pagination__nmbr_activ">1</a>
+                <a class="pagination__nmbr">2</a>
+                <a class="pagination__nmbr">3</a>
+                <a class="pagination__nmbr">4</a>
+                <a class="pagination__nmbr">5</a>
+                <a class="pagination__nmbr">6</a>
+                <span class="pagination__nmbr">...</span>
+                <a class="pagination__nmbr">7</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+   <footer class="footer">
+      <div class="wrapper footer__wrapper">
+        <div class="footer__links">
+          <form class="footer__form">
+            <p class="footer__text">
+              Подпишитесь на нашу рассылку и узнавайте о акция быстрее
+            </p>
+            <div class="footer__form-box">
+              <input
+                class="footer__form-email"
+                type="text"
+                placeholder="Введите ваш e-mail:"
+              />
+              <button class="footer__btn" type="submit">отправить</button>
+            </div>
+          </form>
+          <div class="footer-mobile">
+            <div class="mobile__accordeon-item">
+              <input
+                class="mobile__accordeon-input"
+                id="question1"
+                type="checkbox"
+              />
+              <label class="mobile__accordeon-label" for="question1">
+                Информация
+              </label>
+              <div class="mobile__accordeon-content">
+                <a href="#" class="mobile__accordeon-link">О компании</a>
+                <a href="#" class="mobile__accordeon-link">Контакты</a>
+                <a href="#" class="mobile__accordeon-link">Акции</a>
+                <a href="#" class="mobile__accordeon-link">Магазины</a>
+              </div>
+            </div>
+            <div class="mobile__accordeon-item">
+              <input
+                class="mobile__accordeon-input"
+                id="question2"
+                type="checkbox"
+              />
+              <label class="mobile__accordeon-label" for="question2">
+                Интернет-магазин
+              </label>
+              <div class="mobile__accordeon-content">
+                <a href="#" class="mobile__accordeon-link"
+                  >Доставка и самовывоз
+                </a>
+                <a href="#" class="mobile__accordeon-link">Оплата</a>
+                <a href="#" class="mobile__accordeon-link">Возврат-обмен</a>
+                <a href="#" class="mobile__accordeon-link">Новости</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__info">
+            <a href="#" class="footer__info-link"
+              ><strong class="footer__info-link-bold">Информация</strong></a
+            >
+            <a href="#" class="footer__info-link">О компании</a>
+            <a href="#" class="footer__info-link">Контакты</a>
+            <a href="#" class="footer__info-link">Акции</a>
+            <a href="#" class="footer__info-link">Магазины</a>
+          </div>
+          <div class="footer__shop">
+            <a href="#" class="footer__shop-link"
+              ><strong class="footer__shop-link-bold"
+                >Интернет-магазин</strong
+              ></a
+            >
+            <a href="#" class="footer__shop-link">Доставка и самовывоз</a>
+            <a href="#" class="footer__shop-link">Оплата</a>
+            <a href="#" class="footer__shop-link">Возврат-обмен</a>
+            <a href="#" class="footer__shop-link">Новости</a>
+          </div>
+          <div class="footer__sochial">
+            <a href="#" class="footer__socgial-link">
+              <svg width="30" height="30">
+                <use xlink:href="../assets/img/svg/icon-gramm.svg#gramm"></use>
+              </svg>
+            </a>
+            <a href="#" class="footer__sochial-links">
+              <svg width="30" height="30">
+                <use xlink:href="../assets/img/svg/icon-vk.svg#vk"></use>
+              </svg>
+            </a>
+            <a href="#" class="footer__sochial-links">
+              <svg width="30" height="30">
+                <use
+                  xlink:href="../assets/img/svg/icon-facebook.svg#facebook"
+                ></use>
+              </svg>
+            </a>
+            <a href="#" class="footer__sochial-links">
+              <svg width="30" height="30">
+                <use
+                  xlink:href="../assets/img/svg/icon-youtube.svg#youtube"
+                ></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__agreement">
+          <a href="#" class="footer__agreement-link">Договор оферты</a>
+          <a href="#" class="footer__agreement-link">
+            Политика обработки персональных данных</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/jquery-ui-slider@1.12.1/jquery-ui.min.js
+"></script>
+    <script src="../scripts/catalog.js"></script>
+  </body>
+</html>
